@@ -1,3 +1,5 @@
+![logo](https://github.com/davidcarmonaarrabal/TCGCatch/blob/8bb038272ec3e224ebf5f09c1387eed333a09f65/img/logo.png)
+
 # TCGCatch
 **This is a template, the project is just initialized.**
 
