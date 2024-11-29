@@ -11,18 +11,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/card")
+@CrossOrigin(origins = "http://localhost:5173") // Permitir solicitudes desde el frontend
 public class CardController {
     @Autowired
     private CardService cardService;
 
     @GetMapping
-    public List<Card> getAllCards(){
+    public List<Card> getAllCards() {
         return cardService.getAllCards();
     }
 
     @PostMapping
     public ResponseEntity<Card> createCard(@RequestBody Card card) {
-        System.out.println("Carta recibida: " + card);
         Card savedCard = cardService.saveCard(card);
         return new ResponseEntity<>(savedCard, HttpStatus.CREATED);
     }
